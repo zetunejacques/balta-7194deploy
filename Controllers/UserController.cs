@@ -27,8 +27,8 @@ namespace Shop.Controllers
         }
         [HttpPost]
         [Route("")]
-        [AllowAnonymous]
-        //[Authorize(Roles = "manager")]
+        //[AllowAnonymous]
+        [Authorize(Roles = "manager")]
         public async Task<ActionResult<User>> Post(
             [FromServices] DataContext context,
             [FromBody] User model)

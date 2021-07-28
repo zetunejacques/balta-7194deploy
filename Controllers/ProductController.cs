@@ -15,7 +15,7 @@ namespace Shop.Controllers
     {
         [HttpGet]
         [Route("")]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<ActionResult<List<Product>>> Get([FromServices] DataContext context)
         {
             var products = await context

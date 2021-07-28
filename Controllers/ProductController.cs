@@ -55,7 +55,7 @@ namespace Shop.Controllers
 
         [HttpPost]
         [Route("")]
-        [Authorize(Roles = "funcionario")]
+        [Authorize(Roles = "employee")]
         public async Task<ActionResult<Product>> Post(
             [FromServices] DataContext context,
             [FromBody] Product model)
